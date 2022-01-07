@@ -1,0 +1,639 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+ul,ol {
+    list-style-type: none;
+}
+.clr {
+    clear: both;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,400&display=swap');
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+.nav-main {
+    display: flex;
+}
+.logo {
+    width: 200px;
+}
+.logo img {
+    padding-top: 29px;
+}
+.menu {
+    width: 1000px;
+    text-align: right;
+}
+.menu ul li {
+    display: inline-block;
+    padding-left: 56px;
+}
+.menu ul li a {
+    line-height: 80px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color:#fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    transition: all linear .3s;
+    position: relative;
+}
+.menu ul li a:hover {
+    color: #fce38a;
+}
+.menu ul li a::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color:#fce38a;
+    left: 0;
+    bottom: -12px;
+    opacity: 0;
+    transition: all linear .3s;
+}
+.menu ul li a:hover::after {
+    opacity: 1;
+    width: 100%;
+}
+/*============ navbar part css goes here =============*/
+
+.banner-img {
+    position: relative;
+    background:url(../images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(243, 129, 129,0.9), rgba(252, 227, 138,0.9));
+    display: flex;
+    justify-content: center;
+}
+.banner-text {
+    text-align: center;
+    align-self: center;
+}
+.banner-text h3 {
+    font-size: 72px;
+    font-family: 'Kaushan Script', cursive;
+    color: #fff;
+    text-transform: capitalize;
+}
+.banner-text h1 {
+    font-size: 150px;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 0 90px;
+    position: relative;
+    padding-bottom: 140px;
+}
+.banner-text h1::after {
+    position: absolute;
+    content: '';
+    width: 60px;
+    height: 3px;
+    background-color: #fff;
+    bottom: 97px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.banner-text a {
+    border: 3px solid #fff;
+    padding: 12px 30px;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+/*============ About part css goes here =============*/
+#about {
+    padding-top: 92px;
+    padding-bottom: 110px;
+}
+.head {
+    text-align: center;
+    padding-bottom: 100px;
+}
+.head h4 {
+    font-size: 24px;
+    font-family: 'Kaushan Script', cursive;
+    color: #333;
+    padding-bottom: 11px;
+}
+.head h2 {
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 80px;
+    position: relative;
+}
+.head h2::after {
+    position: absolute;
+    content: '';
+    width: 60px;
+    height:3px;
+    background-color: #f38181;
+    bottom: 42px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.head p {
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    color: #999;
+    font-weight: 400;
+    line-height: 24px;
+    padding:0 120px;
+}
+.about-main {
+    display: flex;
+    justify-content: space-between;
+}
+.about-item {
+    width: 380px;
+    position: relative;
+}
+.about-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(243, 129, 129,0.9), rgba(252, 227, 138,0.9));
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+}
+.about-content {
+    text-align: center;
+    align-self: center;
+}
+.about-content i {
+    font-size: 33px;
+    color: #fff;
+}
+.about-content h3 {
+    font-size: 18px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-top: 11px;
+}
+.about-item:hover .about-overlay {
+    opacity: 1;
+}
+/*============ funfact part css goes here =============*/
+#funfact{
+    padding: 70px 0;
+    background-color: #95e1d3;
+}
+.funfact-item {
+    width: 240px;
+    text-align: center;
+}
+.funfact-item h3 {
+    font-size: 72px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+.funfact-item p {
+    font-size: 14px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.funfact-main {
+    display: flex;
+}
+/*============ service part css goes here =============*/
+#service {
+    padding-top: 107px;
+}
+.service-main{
+    display: flex;
+    justify-content: space-around;
+}
+.service-item {
+    width: 340px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+.service-icon {
+    width: 32px;
+    padding-right: 30px;
+}
+.service-text {
+    width: 278px;
+}
+.service-text h4 {
+    font-size: 14px;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-bottom: 9px;
+}
+.service-text p {
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    color: #999;
+    font-weight: 400;
+    line-height: 24px;
+}
+.service-main.main2 {
+	margin-top: -30px;
+}
+#service .head {
+    padding-bottom: 24px;
+}
+/*============ feedback part css goes here =============*/
+.feedback-main {
+    width: 968px;
+    margin: 0 auto;
+    display: flex;
+}
+#feedback {
+    background-color: #f8f8f8;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.feed-icon {
+    width: 144px;
+    margin-right: 60px;
+    height: 144px;
+    text-align: center;
+    border:3px solid #95e1d3;
+    display: flex;
+    justify-content: center;
+}
+.feed-icon img {
+    align-self: center;
+}
+.feed-text {
+    width: 764px;
+}
+.feed-text p {
+    font-style: italic;
+    font-weight: 300px;
+    color: #999;
+    font-size: 24px;
+    line-height: 36px;
+    padding-bottom: 14px;
+}
+.feed-text h5 {
+    padding-left: 70px;
+    font-size: 24px;
+    font-family: 'Kaushan Script', cursive;
+    color: #333;
+    text-transform: capitalize;
+    position: relative;
+}
+.feed-text h5::after {
+    position: absolute;
+    content: '';
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    top:50%;
+    left: 0;
+    transform:translateY(-50%) ;
+}
+.feedback {
+    position: relative;
+}
+.feedback i {
+    color: #ccc;
+    font-size: 21px;
+}
+.left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+/*============ team part css goes here =============*/
+#team {
+    padding-top: 100px;
+    padding-bottom: 92px;
+}
+.team-main {
+    display: flex;
+    justify-content: space-between;
+}
+.team-item {
+    width: 380px;
+}
+.team-img {
+    position: relative;
+}
+.team-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(243, 129, 129,0.9), rgba(252, 227, 138,0.9));
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    display: flex;
+    transition: all linear .3s;
+}
+.social {
+    align-self: center;
+}
+.social i {
+    width: 56px;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    background-color: #fce38a;
+    color: #f38181;
+    font-size: 26px;
+    margin-right: -3px;
+    transition: all linear .3s;
+}
+.social i:hover {
+    background-color: #f38181;
+    color: #fff;
+}
+.team-info {
+    text-align: center;
+    padding-top: 40px;
+}
+.team-info h3 {
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    padding-bottom: 9px;
+}
+.team-info p {
+    font-size: 15px;
+    color: #999;
+    font-weight: 300;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+}
+.team-item:hover .team-overlay{
+    opacity: 1;
+}
+/*============ gallery part css goes here =============*/
+#gallery {
+    padding-bottom: 100px;
+}
+.gallery-main {
+    display: flex;
+}
+.gallery-item {
+    width: 25%;
+}
+.gal-img {
+    position: relative;
+    line-height: 0;
+}
+.gal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(243, 129, 129,0.9), rgba(252, 227, 138,0.9));
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    display: flex;
+    transition: all linear .3s;
+}
+.gal-info {
+    text-align: center;
+    align-self: center;
+}
+.gal-info i {
+    color: #fff;
+}
+.gal-info h3 {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    padding-top: 25px;
+}
+.gal-info p {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 300;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    padding-top: 27px;
+}
+.gal-img:hover .gal-overlay {
+    opacity: 1;
+}
+/*============ Footer part css goes here =============*/
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 70px;
+}
+.footer-item-left {
+    width: 465px;
+}
+.footer-item-mid {
+    width:350px;
+}
+.footer-item-right {
+    width: 270px;
+}
+footer {
+    background-color: #f8f8f8;
+    padding-top: 75px;
+}
+.footer-item-left p {
+    font-size: 15px;
+    color: #999;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    padding-top: 36px;
+}
+.footer-item-left h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #333;
+    padding-top: 43px;
+    font-weight: 400;
+    padding-bottom: 19px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.footer-item-left h6 span {
+    font-weight: 700;
+    font-size: 18px;
+}
+.footer-item-left h5 i {
+    color: #95e1d3;
+    font-size: 16px;
+    padding-left: 19px;
+}
+.footer-item-left h5 {
+    padding-top: 16px;
+    padding-bottom: 40px;
+    font-size: 15px;
+    color: #999;
+    font-weight: 300;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+}
+.form {
+    width: 380px;
+    position: relative;
+}
+.form input {
+    width: 100%;
+    height: 38px;
+    padding-left: 12px;
+    border: 1px solid #e7e7e7;
+}
+.form button {
+    padding: 10px 34px;
+    background-color: #95e1d3;
+    border: 0;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.form input::placeholder {
+    font-size: 15px;
+    color: #999;
+    font-weight: 300;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+}
+
+.footer-item-mid h3{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase;
+    padding-bottom: 36px;
+}
+.blog-item {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 25px;
+}
+.blog-img {
+    width: 120px;
+}
+.blog-text {
+    width: 210px;
+}
+.blog-text h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: #333;
+    line-height: 18px;
+    text-transform: uppercase;
+    padding-top: 15px;
+}
+.blog-text p {
+    font-size: 13px;
+    color: #999;
+    font-weight: 300;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 5px;
+}
+.footer-item-right h3{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase;
+    padding-bottom: 36px;
+}
+.insta-main {
+    display: flex;
+    flex-wrap: wrap;
+}
+.insta-item {
+    width: 33%;
+}
+.view-btn {
+    padding-top: 10px;
+}
+.view-btn a {
+    font-size: 13px;
+    color: #999;
+    font-weight: 300;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+}
+.copyright {
+    text-align: center;
+}
+.copyright p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #333;
+    line-height: 60px;
+}
+.copyright span {
+    color: #f38181;
+}
+/*============ navbar part css goes here =============*/
+/*============ navbar part css goes here =============*/
+/*============ navbar part css goes here =============*/
